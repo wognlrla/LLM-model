@@ -1,0 +1,129 @@
+[
+ {
+  "photo": "washer.jpg",
+  "det_ms": 1187,
+  "boxes": [
+   {
+    "det": "chair",
+    "conf": 0.63,
+    "box": [
+     2,
+     272,
+     95,
+     408
+    ],
+    "label": "의자"
+   },
+   {
+    "det": "product box",
+    "conf": 0.46,
+    "box": [
+     0,
+     409,
+     110,
+     590
+    ],
+    "label": "제품 상자"
+   },
+   {
+    "det": "microwave",
+    "conf": 0.29,
+    "box": [
+     187,
+     0,
+     1280,
+     696
+    ],
+    "label": "전자레인지"
+   }
+  ]
+ },
+ {
+  "photo": "washer_big.jpg",
+  "det_ms": 43,
+  "boxes": [
+   {
+    "det": "cardboard box",
+    "conf": 0.58,
+    "box": [
+     93,
+     599,
+     286,
+     717
+    ],
+    "label": "종이 상자"
+   },
+   {
+    "det": "drum washing machine",
+    "conf": 0.55,
+    "box": [
+     694,
+     77,
+     1118,
+     683
+    ],
+    "label": "드럼 세탁기"
+   },
+   {
+    "det": "AA battery",
+    "conf": 0.37,
+    "box": [
+     970,
+     105,
+     1068,
+     130
+    ],
+    "label": "건전지"
+   }
+  ]
+ },
+ {
+  "photo": "crops/keyboard.jpg",
+  "det_ms": 130,
+  "boxes": []
+ },
+ {
+  "photo": "crops/laptop_closed.jpg",
+  "det_ms": 71,
+  "boxes": [
+   {
+    "det": "laptop",
+    "conf": 0.6,
+    "box": [
+     1,
+     11,
+     1272,
+     447
+    ],
+    "label": "노트북"
+   }
+  ]
+ },
+ {
+  "photo": "crops/laptop_open.jpg",
+  "det_ms": 42,
+  "boxes": []
+ },
+ {
+  "photo": "crops/monitor_back.jpg",
+  "det_ms": 64,
+  "boxes": []
+ },
+ {
+  "photo": "crops/monitor_front.jpg",
+  "det_ms": 65,
+  "boxes": [
+   {
+    "det": "laptop",
+    "conf": 0.54,
+    "box": [
+     0,
+     0,
+     1248,
+     988
+    ],
+    "label": "노트북"
+   }
+  ]
+ }
+]

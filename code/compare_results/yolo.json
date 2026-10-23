@@ -1,0 +1,49 @@
+[
+ {
+  "photo": "washer.jpg",
+  "det_ms": 3035,
+  "boxes": []
+ },
+ {
+  "photo": "washer_big.jpg",
+  "det_ms": 29,
+  "boxes": []
+ },
+ {
+  "photo": "crops/keyboard.jpg",
+  "det_ms": 49,
+  "boxes": []
+ },
+ {
+  "photo": "crops/laptop_closed.jpg",
+  "det_ms": 69,
+  "boxes": [
+   {
+    "det": "car",
+    "conf": 0.53,
+    "box": [
+     109,
+     360,
+     203,
+     434
+    ],
+    "label": "car"
+   }
+  ]
+ },
+ {
+  "photo": "crops/laptop_open.jpg",
+  "det_ms": 32,
+  "boxes": []
+ },
+ {
+  "photo": "crops/monitor_back.jpg",
+  "det_ms": 52,
+  "boxes": []
+ },
+ {
+  "photo": "crops/monitor_front.jpg",
+  "det_ms": 45,
+  "boxes": []
+ }
+]

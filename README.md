@@ -16,7 +16,7 @@ Jetson Orin Nano Super 보드 한 대에서 `google/embeddinggemma-2`를 돌려 
 | 5 음성 검색 | 2/3 정답(합성 음성만 오답), WAV 3개 0.35초 |
 | 6 성능 | 전체 모델(744M)도 동작, 실행 중 최대 RAM 6.4GB / 7.3GB |
 | 7 미세 조정 | accuracy@1 0.833 → 0.85, accuracy@3 0.917 → 0.967. 일반 질의 1개는 나빠짐(과적합 신호) |
-| 8 실시간 검색 | YOLO가 상자를 tv로, 모니터 뒷면을 cat으로 오인식. relabel로 모니터·의자 라벨 교정 |
+| 8 실시간 검색 | yolo는 세탁기·상자를 못 잡거나 오인식. relabel은 잡힌 물체 7/7 라벨 교정. yoloe만 드럼 세탁기·상자 검출 → yoloe 박스 + relabel 라벨 조합 권장 |
 
 ## 실행 환경
 
@@ -42,6 +42,8 @@ Jetson Orin Nano Super 보드 한 대에서 `google/embeddinggemma-2`를 돌려 
 | `eval_ir.py`, `train_ft.py` | 7 | 평가(Recall@k)·미세 조정 |
 | `baseline_eval.txt`, `finetuned_eval.txt` | 7 | 학습 전후 평가 결과 |
 | `app.py`, `run_app.sh` | 8 | 실시간 물체 검출·검색 웹앱(yolo / relabel / yoloe), 실행 스크립트 |
+| `compare_photos.py`, `compare_results/` | 8 | 저장한 같은 사진으로 세 모드 비교, 모드별 결과(JSON) |
+| `guard_run.sh`, `mem_guard.sh` | 8 | 보드 메모리가 400MB 아래로 떨어지면 실습 프로그램만 끄는 보호 스크립트 |
 
 ### 실행 예
 
