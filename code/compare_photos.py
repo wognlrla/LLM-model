@@ -14,6 +14,9 @@ CROP_YOLO = {"laptop_closed": "laptop", "laptop_open": "laptop", "keyboard": "ke
              "monitor_front": "tv", "monitor_back": "tv"}
 W = 1280                                   # app.py와 같은 검출 해상도
 CONF = {"yolo": 0.5, "relabel": 0.35, "yoloe": 0.25}[MODE]
+if os.environ.get("CONF"):                 # 예) CONF=0.1 python compare_photos.py yolo  (기준을 낮춰 약한 검출까지 보기)
+    CONF = float(os.environ["CONF"])
+TAG = os.environ.get("TAG", "")            # 결과 파일 이름 뒤에 붙일 표시 (예: _conf0.1)
 MIN_SIDE, DIM, LABEL_MIN = 48, 512, 0.20
 LABELS = [
     ("drum washing machine", "드럼 세탁기"), ("top-load washing machine", "통돌이 세탁기"),
@@ -79,7 +82,7 @@ for path in PHOTOS:
         color = (0, 200, 255) if MODE == "relabel" else (0, 255, 0)
         cv2.rectangle(img, (x1, y1), (x2, y2), color, 3)
         cv2.putText(img, f"{name} {cf:.2f}", (x1, max(y1 - 8, 20)), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
-    out = f"out_compare/{MODE}_{os.path.basename(path)}"
+    out = f"out_compare/{MODE}{TAG}_{os.path.basename(path)}"
     cv2.imwrite(out, img)
     label = ("crops/" if "/crops/" in path else "") + os.path.basename(path)
     results.append({"photo": label, "det_ms": round(det_ms), "boxes": boxes})
@@ -91,4 +94,5 @@ for r in results:
     for b in r["boxes"]:
         extra = f" → 재라벨 {b['label']} ({b['score']}) | 후보 {b['top3']}" if "score" in b else ""
         print(f"   {b['det']:22s} {b['conf']:.2f}{extra}")
-json.dump(results, open(f"out_compare/{MODE}.json", "w"), ensure_ascii=False, indent=1)
+print(f"(conf={CONF})")
+json.dump(results, open(f"out_compare/{MODE}{TAG}.json", "w"), ensure_ascii=False, indent=1)

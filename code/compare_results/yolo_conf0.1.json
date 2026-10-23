@@ -1,0 +1,58 @@
+[
+ {
+  "photo": "washer_big.jpg",
+  "det_ms": 3051,
+  "boxes": [
+   {
+    "det": "clock",
+    "conf": 0.14,
+    "box": [
+     692,
+     80,
+     1115,
+     563
+    ],
+    "label": "clock"
+   },
+   {
+    "det": "clock",
+    "conf": 0.1,
+    "box": [
+     776,
+     233,
+     1035,
+     479
+    ],
+    "label": "clock"
+   }
+  ]
+ },
+ {
+  "photo": "washer.jpg",
+  "det_ms": 33,
+  "boxes": [
+   {
+    "det": "cell phone",
+    "conf": 0.14,
+    "box": [
+     1083,
+     78,
+     1277,
+     342
+    ],
+    "label": "휴대폰"
+   },
+   {
+    "det": "cell phone",
+    "conf": 0.11,
+    "box": [
+     378,
+     261,
+     595,
+     540
+    ],
+    "label": "휴대폰"
+   }
+  ]
+ }
+]
