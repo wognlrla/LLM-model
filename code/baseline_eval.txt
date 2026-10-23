@@ -1,0 +1,4 @@
+  from sentence_transformers.evaluation import InformationRetrievalEvaluator
+accuracy@1 0.833
+accuracy@3 0.917
+ndcg@10 0.918

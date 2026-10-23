@@ -1,0 +1,14 @@
+# 계정 정보·개인정보·모델은 올리지 않는다
+.camera_url
+.env
+*.env
+media/
+crops/
+crops_trial/
+models/
+runs/
+*.pt
+*.safetensors
+*.log
+__pycache__/
+*.pyc
