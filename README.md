@@ -17,6 +17,7 @@ Jetson Orin Nano Super 보드 한 대에서 `google/embeddinggemma-2`를 돌려 
 | 6 성능 | 전체 모델(744M)도 동작, 실행 중 최대 RAM 6.4GB / 7.3GB |
 | 7 미세 조정 | accuracy@1 0.833 → 0.85, accuracy@3 0.917 → 0.967. 일반 질의 1개는 나빠짐(과적합 신호) |
 | 8 실시간 검색 | yolo는 세탁기를 clock·cell phone으로 오인식. relabel이 드럼·통돌이 세탁기로 교정(3/4). yoloe만 기본 기준에서 세탁기·상자 검출 → yoloe 박스 + relabel 라벨 조합 권장 |
+| 9 동작 인식 (합성 관절) | 시간 안정화로 깜빡임 제거(만세 13→3회), 관심도 11/12. GRU는 데이터를 3→6명으로 늘리자 낯선 사람 박수 0% → 95~100% |
 
 ## 실행 환경
 
@@ -44,6 +45,8 @@ Jetson Orin Nano Super 보드 한 대에서 `google/embeddinggemma-2`를 돌려 
 | `app.py`, `run_app.sh` | 8 | 실시간 물체 검출·검색 웹앱(yolo / relabel / yoloe), 실행 스크립트 |
 | `compare_photos.py`, `compare_results/` | 8 | 저장한 같은 사진으로 세 모드 비교, 모드별 결과(JSON) |
 | `guard_run.sh`, `mem_guard.sh` | 8 | 보드 메모리가 400MB 아래로 떨어지면 실습 프로그램만 끄는 보호 스크립트 |
+| `pose/pose_app.py`, `pose/pose_model.py`, `pose/train_pose.py` | 9 | 동작 인식 웹앱(VIGI 카메라 대응), 관절 특징·GRU, 학습 스크립트 |
+| `pose/pose_sim.py`, `pose/results/` | 9 | 합성 관절 데이터 생성과 9-1~9-6 실험, 결과(JSON) |
 
 ### 실행 예
 
