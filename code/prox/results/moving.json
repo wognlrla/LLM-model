@@ -1,0 +1,76 @@
+[
+ {
+  "name": "천천히 (0.5m/s)",
+  "danger": {
+   "t": 6.0,
+   "true_d": 1.0,
+   "msg": "알람: 충돌 위험 TTC 1.8초 (접근 0.5m/s, 1.0m)"
+  },
+  "near": {
+   "t": 6.0,
+   "true_d": 1.0
+  },
+  "lead_s": 0.0,
+  "speed_est": 0.54,
+  "stop_under_m": 0.12,
+  "target_events": [],
+  "lost_frames": 0,
+  "pred_frames": 0
+ },
+ {
+  "name": "보통 (1.0m/s)",
+  "danger": {
+   "t": 1.86,
+   "true_d": 2.14,
+   "msg": "알람: 충돌 위험 TTC 1.9초 (접근 1.1m/s, 2.1m)"
+  },
+  "near": {
+   "t": 3.0,
+   "true_d": 1.0
+  },
+  "lead_s": 1.14,
+  "speed_est": 1.12,
+  "stop_under_m": 0.28,
+  "target_events": [],
+  "lost_frames": 0,
+  "pred_frames": 0
+ },
+ {
+  "name": "빠르게 (1.5m/s)",
+  "danger": {
+   "t": 1.14,
+   "true_d": 2.29,
+   "msg": "알람: 충돌 위험 TTC 1.6초 (접근 1.5m/s, 2.4m)"
+  },
+  "near": {
+   "t": 2.14,
+   "true_d": 0.79
+  },
+  "lead_s": 1.0,
+  "speed_est": 1.47,
+  "stop_under_m": 0.35,
+  "target_events": [],
+  "lost_frames": 0,
+  "pred_frames": 0
+ },
+ {
+  "name": "카메라에서 2.5초 가려짐 (1.0m/s)",
+  "danger": {
+   "t": 2.57,
+   "true_d": 1.43,
+   "msg": "알람: 충돌 위험 TTC 0.9초 (접근 1.6m/s, 1.4m)"
+  },
+  "near": {
+   "t": 3.0,
+   "true_d": 1.0
+  },
+  "lead_s": 0.43,
+  "speed_est": 1.58,
+  "stop_under_m": 0.32,
+  "target_events": [
+   "다시 찾음 (임베딩 재식별)"
+  ],
+  "lost_frames": 5,
+  "pred_frames": 17
+ }
+]

@@ -1,0 +1,68 @@
+{
+ "cam0": {
+  "rms_px": 0.345,
+  "f": 419.6,
+  "f_true": 420.0,
+  "mean_px": 0.92,
+  "pos_err_cm": 1.5,
+  "pos": [
+   0.31,
+   0.29,
+   2.4
+  ]
+ },
+ "cam1": {
+  "rms_px": 0.341,
+  "f": 421.5,
+  "f_true": 420.0,
+  "mean_px": 1.02,
+  "pos_err_cm": 3.1,
+  "pos": [
+   7.69,
+   0.27,
+   2.39
+  ]
+ },
+ "verify": {
+  "F1": {
+   "check": false,
+   "err_cm": 1.2
+  },
+  "F2": {
+   "check": false,
+   "err_cm": 1.7
+  },
+  "F3": {
+   "check": false,
+   "err_cm": 2.9
+  },
+  "F4": {
+   "check": false,
+   "err_cm": 4.6
+  },
+  "D1": {
+   "check": false,
+   "err_cm": 2.3
+  },
+  "D2": {
+   "check": false,
+   "err_cm": 2.5
+  },
+  "W1": {
+   "check": false,
+   "err_cm": 3.9
+  },
+  "W2": {
+   "check": false,
+   "err_cm": 2.5
+  },
+  "C1": {
+   "check": true,
+   "err_cm": 3.6
+  },
+  "C2": {
+   "check": true,
+   "err_cm": 5.0
+  }
+ }
+}
